@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>秒杀抢购</title>
+    <script th:src="@{static/jquery-3.6.0.js}"></script>
+</head>
+<body>
+
+<script>
+    $(document).ready(function(){
+        // function sixId() {
+        //     let num="";
+        //     for (let i=0;i<6;i++){
+        //         let x = 10;//上限
+        //         let y = 0; //下限
+        //         let rand = parseInt(Math.random() * (x - y + 1) + y);
+        //         num += rand;
+        //     }
+        //     return num;
+        // }
+        $("#spike").click(function () {
+            $.get("/spike",{proId:"iphone"},function (response) {
+
+                    alert((response))
+
+            })
+        })
+
+
+    });
+</script>
+<h1>iphone 13 Pro Max 限时抢购</h1>
+<button style="margin-left: 100px;height: 40px;width: 70px" id="spike">抢购</button>
+</body>
+</html>

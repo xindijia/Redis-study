@@ -1,0 +1,15 @@
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: # \u5982\u679C\u672A\u5355\u72EC\u914D\u7F6E\u9ED8\u8BA4\u4E3A\u7A7A\u5373\u53EF
+    timeout: 1000
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+  mvc:
+    static-path-pattern: /static/**
